@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161229044652) do
+ActiveRecord::Schema.define(version: 20161229122537) do
 
   create_table "messages", force: :cascade do |t|
     t.text     "content"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 20161229044652) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["visitor_id"], name: "index_messages_on_visitor_id"
+  end
+
+  create_table "moderators", force: :cascade do |t|
+    t.string   "fullname"
+    t.string   "username"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "notifications", force: :cascade do |t|
