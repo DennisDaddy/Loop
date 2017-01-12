@@ -8,6 +8,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 
+gem 'devise'
+
 
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
