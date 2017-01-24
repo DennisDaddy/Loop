@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161229122537) do
+ActiveRecord::Schema.define(version: 20170124084415) do
 
   create_table "messages", force: :cascade do |t|
     t.text     "content"
@@ -44,6 +44,16 @@ ActiveRecord::Schema.define(version: 20161229122537) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_post_tags_on_post_id"
     t.index ["tag_id"], name: "index_post_tags_on_tag_id"
+  end
+
+  create_table "settings", force: :cascade do |t|
+    t.string   "site_name"
+    t.integer  "post_per_page"
+    t.boolean  "under_maintenance"
+    t.boolean  "prevent_commenting"
+    t.boolean  "tag_visibility"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "tags", force: :cascade do |t|
