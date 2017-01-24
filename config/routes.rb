@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-  resources :moderators
+  resources :moderators, only: [:index]
 end
 end
