@@ -5,6 +5,6 @@
  	end
 
  	def edit
- 		
+ 		@moderator = Moderator.find(params[:id]) 		
  	end
  end
