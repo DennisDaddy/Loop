@@ -11,7 +11,7 @@
  	def update
  		@moderator = Moderator.find(params[:id])
  		if @moderator.update(moderator_params)
- 			redirect_to :back
+ 			redirect_to  admin_moderators_url
  		else
  			render 'edit'
  		end 		
