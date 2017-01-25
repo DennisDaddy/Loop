@@ -11,8 +11,10 @@
  	def update
  		@moderator = Moderator.find(params[:id])
  		if @moderator.update(moderator_params)
+ 			flash[:notice] = "Moderator was successfuly updated"
  			redirect_to  admin_moderators_url
  		else
+ 			flash[:alert] = "Problem updating moderator"
  			render 'edit'
  		end 		
  	end
