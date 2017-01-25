@@ -1,4 +1,6 @@
 class Admin::ApplicationController < ApplicationController
+
+	before_action :authorize
 	def current_moderator
 		false		
 	end
