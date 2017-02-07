@@ -16,5 +16,7 @@ end
   end
 
   def destroy
+    session[:current_moderator_id] = nil
+    redirect_to 'login', notice: 'You have successfuly logged out'
   end
 end
