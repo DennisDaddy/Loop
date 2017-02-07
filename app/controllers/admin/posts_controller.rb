@@ -27,4 +27,10 @@ class Admin::PostsController < Admin::ApplicationController
 
   def destroy
   end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:id, :title, :content, :publish, tag_ids: [])
+  end
 end
