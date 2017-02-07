@@ -5,4 +5,5 @@ module ApplicationHelper
 		else
 			falsey
 		end
+	end
 end
