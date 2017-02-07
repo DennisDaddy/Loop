@@ -2,4 +2,4 @@
 <p><b>title:</b> <%= @post.title %></p>
 <p><b>content:</b> <%= @post.content %></p>
 <p><b>publish:</b> <%= status_converter(@post.publish) %></p>
-<p><b>created:</b> <%= @post.created_at %></p>
+<p><b>created:</b> <%= time_ago (@post.created_at) %></p>
