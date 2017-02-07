@@ -6,8 +6,7 @@ class Post < ApplicationRecord
   
   validates :title, presence: true
   validates :content, presence: true
-  validates :publish, presence: true
-
+  
 
 
 def self.matching_title_or_content search
