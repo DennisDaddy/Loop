@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
 
 
+  namespace :admin do
+    get 'comments/index'
+  end
+
+  namespace :admin do
+    get 'comments/update'
+  end
+
+  namespace :admin do
+    get 'comments/destroy'
+  end
+
   get '/login' => 'admin/sessions#new'
    get '/logout' => 'admin/sessions#destroy'
 
