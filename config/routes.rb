@@ -1,22 +1,10 @@
 Rails.application.routes.draw do
 
-
-  namespace :admin do
-    get 'comments/index'
-  end
-
-  namespace :admin do
-    get 'comments/update'
-  end
-
-  namespace :admin do
-    get 'comments/destroy'
-  end
-
   get '/login' => 'admin/sessions#new'
    get '/logout' => 'admin/sessions#destroy'
 
   namespace :admin do
+  resources :comments, only: [:index, :update, :destroy]
   resources :tags, except: [:index]
   resources :posts	
   resources :sessions, only: [:new, :create, :destroy]
